@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prueba</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="number" name="numero" id="numero">
+    <button onclick="pila.push()">PUSH</button>
+    <button onclick="pila.pop()">POP</button>
+    <ul id="lista"></ul>
+    <script>
+        class Pila {
+            constructor() {
+                this.pila = [];
+                this.count = 0;
+            }
+  
+            push() {
+                var element = document.getElementById('numero').value;
+                this.pila[this.count] = element;
+                this.count++;
+                this.printElements();
+            }
+  
+            pop() {
+                this.count--;
+                this.pila.pop();
+                this.printElements();
+            }
+  
+            print() {
+                console.log(this.pila);
+            }
+
+            printElements(){
+                var list = this.pila
+                var min = Math.min(...this.pila)
+                var elements = this.pila.map((number) => {
+                    if(min == number )
+                        return '<li class="min">' + number + '</li>'
+                    else 
+                        return '<li class="num">' + number + '</li>'
+                })
+                document.getElementById('lista').innerHTML = elements;
+            }
+        }
+  
+        const pila = new Pila();
+    </script>
+    <!-- <button onclick="pila.print()">Imprimir</button> -->
+</body>
+</html>

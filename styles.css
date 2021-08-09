@@ -1,0 +1,25 @@
+button {
+    border-color: blueviolet;
+    border-radius: 5px;
+    color:white;
+    background-color: blueviolet;
+    width: 50px;
+    height: 30px;
+}
+.min {
+    border: 2px solid blueviolet;
+    background-color:blueviolet;
+    border-radius:5px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    text-align: center;
+}
+.num {
+    border: 2px solid blueviolet;
+    border-radius:5px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
